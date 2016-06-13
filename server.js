@@ -17,6 +17,10 @@ app.get('/about', middleware.requireAuthentication, function (req, res) {
 	res.send('About Us!');
 });
 
+app.get('/contact', middleware.requireAuthentication, function (req, res) {
+	res.send('Contact Us!');
+});
+
 app.use(express.static(__dirname + '/public'));
 //console.log(__dirname);
 
